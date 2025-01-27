@@ -6,18 +6,19 @@ If you have any questions or would like to collaborate, feel free to reach out t
 
 ## Workflow
 
-**Extracting Excel File Preview**
+**1. Extracting Excel File Preview**
+*Input:* Free-form user query (e.g., "Tell me which ticker symbols in the proposed price range $10.00 to $20.00 have an average performance above 20%, given that performance is spread across months 1 through 12."), Excel file.
+*Output:* Excel file preview, including column names and data types.
 
 *Manual Step:* Read and extract an Excel file preview, then pass it to the LLM.
-Input: Free-form user query (e.g., "Tell me which ticker symbols in the proposed price range $10.00 to $20.00 have an average performance above 20%, given that performance is spread across months 1 through 12."), Excel file.
-Output: Excel file preview, including column names and data types.
-LLM Query Generation & Tool Selection
 
-LLM Step: The LLM analyzes the preview and determines whether to generate a Pandas query or an SQL query. It then selects the appropriate tool for execution.
-Input: Excel preview.
-Output: Generated query, selected tool, and LLM-prompt (a refined version of the user query).
-Query Validation & Execution
+**2. LLM Query Generation & Tool Selection**
+*Input:* Excel preview.
+*Output:* Generated query, selected tool, and LLM-prompt (a refined version of the user query).
 
+*LLM Step:* The LLM analyzes the preview and determines whether to generate a Pandas query or an SQL query. It then selects the appropriate tool for execution.
+
+**3. Query Validation & Execution**
 LLM Step: The LLM reviews the generated query and attempts execution.
 Error Handling: If the first attempt fails, the LLM analyzes the error and tries to fix the query for a second attempt. The number of retry attempts is configurable.
 Input: Output from the previous step + query execution output state.
