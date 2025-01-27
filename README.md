@@ -14,7 +14,7 @@ If you have any questions or would like to collaborate, feel free to reach out t
 
 **2. LLM Query Generation & Tool Selection**
 
-**_Input:_** Excel preview.
+**_Input:_** Excel preview.<br>
 **_Output:_** Generated query, selected tool, and LLM-prompt (a refined version of the user query).<br>
 **_LLM Step:_** The LLM analyzes the preview and determines whether to generate a Pandas query or an SQL query. It then selects the appropriate tool for execution.
 
