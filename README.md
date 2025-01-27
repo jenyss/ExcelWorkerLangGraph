@@ -8,8 +8,8 @@ If you have any questions or would like to collaborate, feel free to reach out t
 
 **1. Extracting Excel File Preview**
 
-_**Input:**_ Free-form user query (e.g., "Tell me which ticker symbols in the proposed price range $10.00 to $20.00 have an average performance above 20%, given that performance is spread across months 1 through 12."), Excel file.
-*Output:* Excel file preview, including column names and data types.
+**_Input:_** Free-form user query (e.g., "Tell me which ticker symbols in the proposed price range $10.00 to $20.00 have an average performance above 20%, given that performance is spread across months 1 through 12."), Excel file.
+**_Output:**_ Excel file preview, including column names and data types.
 
 *Manual Step:* Read and extract an Excel file preview, then pass it to the LLM.
 
