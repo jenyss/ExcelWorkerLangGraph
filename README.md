@@ -10,20 +10,20 @@ If you have any questions or would like to collaborate, feel free to reach out t
 
 **_Input:_** Free-form user query (e.g., "Tell me which ticker symbols in the proposed price range $10.00 to $20.00 have an average performance above 20%, given that performance is spread across months 1 through 12."), Excel file.<br>
 **_Output:_** Excel file preview, including column names and data types.<br>
-**_Manual Step:**_ Read and extract an Excel file preview, then pass it to the LLM.
+**_Manual Step:_** Read and extract an Excel file preview, then pass it to the LLM.
 
 **2. LLM Query Generation & Tool Selection**
 
-**_Input:**_ Excel preview.
-**_Output:**_ Generated query, selected tool, and LLM-prompt (a refined version of the user query).<br>
-**_LLM Step:**_ The LLM analyzes the preview and determines whether to generate a Pandas query or an SQL query. It then selects the appropriate tool for execution.
+**_Input:_** Excel preview.
+**_Output:_** Generated query, selected tool, and LLM-prompt (a refined version of the user query).<br>
+**_LLM Step:_** The LLM analyzes the preview and determines whether to generate a Pandas query or an SQL query. It then selects the appropriate tool for execution.
 
 **3. Query Validation & Execution**
 
-**_Input:**_ Output from the previous step + query execution output state.<br>
-**_Output:**_ Execution result from the LLM generated query, answering the user query.<br>
-**_LLM Step:**_ The LLM reviews the generated query and attempts execution.<br>
-**_Error Handling:**_ If the first attempt fails, the LLM analyzes the error and tries to fix the query for a second attempt. The number of retry attempts is configurable.
+**_Input:_** Output from the previous step + query execution output state.<br>
+**_Output:_** Execution result from the LLM generated query, answering the user query.<br>
+**_LLM Step:_** The LLM reviews the generated query and attempts execution.<br>
+**_Error Handling:_** If the first attempt fails, the LLM analyzes the error and tries to fix the query for a second attempt. The number of retry attempts is configurable.
 
 ## Intallation
 
